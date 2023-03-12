@@ -1,9 +1,9 @@
-export const Sidebar = () => {
+export const Header = () => {
   return (
     <header className='sticky top-0 flex max-h-screen w-60 flex-auto flex-col justify-between border-r p-4 shadow'>
       <div className='flex flex-auto flex-col items-center gap-4 pb-2'>
         <div className='h-28 w-28 rounded-full bg-gray-400'></div>
-        <span>Projects</span>
+        <span className='text-lg'>Projects</span>
         <ul className='h-auto overflow-auto'>
           <li>----</li>
           <li>----</li>
