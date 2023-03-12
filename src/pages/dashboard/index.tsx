@@ -1,8 +1,14 @@
 import { type GetServerSideProps } from 'next'
+import { DashboardScreen } from '~/components/screens/dashboard/DashboardScreen'
+import { NavLayout } from '~/layouts/NavLayout'
 import { getServerAuthSession } from '~/server/auth'
 
 export default function Dashboard() {
-  return <div>Dashboard</div>
+  return (
+    <NavLayout>
+      <DashboardScreen />
+    </NavLayout>
+  )
 }
 
 export const getServerSideProps: GetServerSideProps = async ctx => {
