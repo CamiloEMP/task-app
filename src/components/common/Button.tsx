@@ -23,7 +23,7 @@ export const Button = ({
     <button
       className={`${colors[variant]} ${
         className ?? ''
-      } flex items-center gap-1 rounded-md border-2 border-transparent font-semibold transition-colors`}
+      } flex items-center justify-center gap-1 rounded-md border-2 border-transparent font-semibold transition-colors`}
       {...rest}
     >
       {Icon && <Icon />}

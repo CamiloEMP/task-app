@@ -1,15 +1,21 @@
 import { signOut } from 'next-auth/react'
-import { SignoutIcon } from '~/assets/icons/SignoutIcon'
+import { SettingsIcon } from '~/components/icons/SettingsIcon'
+import { SignoutIcon } from '~/components/icons/SignoutIcon'
 import { Button } from '../Button'
 
 export const FooterHeader = () => {
   return (
     <>
-      <button className='rounded-md bg-neutral-400 px-2 py-1 font-semibold text-neutral-900'>
+      <Button
+        className='px-1 py-1 text-center'
+        variant='primary'
+      >
         Create new Project
-      </button>
-      <div className='flex items-center justify-between gap-2'>
-        <div className='h-5 w-5 rounded-full bg-gray-400'></div>
+      </Button>
+      <div className='flex items-center justify-around gap-2'>
+        <button className='rounded-full p-1 transition-colors hover:bg-black/10'>
+          <SettingsIcon />
+        </button>
         <Button
           className='px-4 py-1 text-sm'
           icon={SignoutIcon}
