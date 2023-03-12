@@ -18,7 +18,7 @@ const Home: NextPage = () => {
           href='/favicon.ico'
         />
       </Head>
-      <main className='flex min-h-screen flex-col items-center justify-center'>
+      <main className='flex min-h-screen flex-col items-center justify-center bg-neutral-100'>
         <span>initial commit</span>
         <AuthShowcase />
       </main>
