@@ -1,6 +1,11 @@
 type Variants = 'primary' | 'secondary'
 
-interface Props {
+type ButtonProps = React.DetailedHTMLProps<
+  React.ButtonHTMLAttributes<HTMLButtonElement>,
+  HTMLButtonElement
+>
+
+interface Props extends ButtonProps {
   children: React.ReactNode
   variant: Variants
   className?: string
