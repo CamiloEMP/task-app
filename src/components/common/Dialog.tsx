@@ -1,6 +1,7 @@
 import { AnimatePresence, motion } from 'framer-motion'
 import { useEffect } from 'react'
 import { createPortal } from 'react-dom'
+import { CloseIcon } from '../icons/CloseIcon'
 
 const backdrop = {
   visible: { opacity: 1 },
@@ -20,9 +21,10 @@ interface Props {
   isOpen: boolean
   closable?: boolean
   onClose?: () => void
+  className?: string
 }
 
-export default function Dialog({ children, isOpen, onClose, closable = false }: Props) {
+export function Dialog({ children, isOpen, className, onClose, closable = false }: Props) {
   useEffect(() => {
     if (!closable) return
 
@@ -53,16 +55,16 @@ export default function Dialog({ children, isOpen, onClose, closable = false }: 
               variants={backdrop}
             >
               <motion.div
-                className='relative rounded-md bg-slate-100 p-4'
+                className={`relative rounded-md bg-slate-100 ${className ?? ''}`}
                 variants={modal}
               >
                 {children}
                 {closable && (
                   <button
                     onClick={_ => onClose?.()}
-                    className='absolute top-2 right-2'
+                    className='absolute top-2 right-2 outline-none'
                   >
-                    x
+                    <CloseIcon className='text-2xl text-neutral-600 transition-colors hover:text-emerald-600' />
                   </button>
                 )}
               </motion.div>
