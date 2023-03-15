@@ -9,6 +9,7 @@ specifiers:
   '@trpc/react-query': ^10.9.0
   '@trpc/server': ^10.9.0
   '@types/eslint': ^8.21.1
+  '@types/lodash.isempty': ^4.4.7
   '@types/node': ^18.14.0
   '@types/prettier': ^2.7.2
   '@types/react': ^18.0.28
@@ -19,6 +20,7 @@ specifiers:
   eslint: ^8.34.0
   eslint-config-next: ^13.2.1
   framer-motion: ^10.3.1
+  lodash.isempty: ^4.4.0
   next: ^13.2.1
   next-auth: ^4.19.0
   postcss: ^8.4.14
@@ -41,6 +43,7 @@ dependencies:
   '@trpc/react-query': 10.15.0_f89027b85a022ac04b41455dc705522f
   '@trpc/server': 10.15.0
   framer-motion: 10.3.1_react-dom@18.2.0+react@18.2.0
+  lodash.isempty: 4.4.0
   next: 13.2.4_react-dom@18.2.0+react@18.2.0
   next-auth: 4.20.1_58f4922f6793da676e9d5cd1a5197a94
   react: 18.2.0
@@ -50,6 +53,7 @@ dependencies:
 
 devDependencies:
   '@types/eslint': 8.21.1
+  '@types/lodash.isempty': 4.4.7
   '@types/node': 18.15.0
   '@types/prettier': 2.7.2
   '@types/react': 18.0.28
@@ -439,6 +443,16 @@ packages:
 
   /@types/json5/0.0.29:
     resolution: {integrity: sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==}
+    dev: true
+
+  /@types/lodash.isempty/4.4.7:
+    resolution: {integrity: sha512-YOzlpoIn9jrfHzjIukKnu9Le3tmi+0PhUdOt2rMpJW/4J6jX7s0HeBatXdh9QckLga8qt4EKBxVIEqtEq6pzLg==}
+    dependencies:
+      '@types/lodash': 4.14.191
+    dev: true
+
+  /@types/lodash/4.14.191:
+    resolution: {integrity: sha512-BdZ5BCCvho3EIXw6wUCXHe7rS53AIDPLE+JzwgT+OsJk53oBfbSmZZ7CX4VaRoN78N+TJpFi9QPlfIVNmJYWxQ==}
     dev: true
 
   /@types/node/18.15.0:
@@ -1963,6 +1977,10 @@ packages:
     dependencies:
       p-locate: 5.0.0
     dev: true
+
+  /lodash.isempty/4.4.0:
+    resolution: {integrity: sha512-oKMuF3xEeqDltrGMfDxAPGIVMSSRv8tbRSODbrs4KGsRRLEhrW8N8Rd4DRgB2+621hY8A8XwwrTVhXWpxFvMzg==}
+    dev: false
 
   /lodash.merge/4.6.2:
     resolution: {integrity: sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==}
