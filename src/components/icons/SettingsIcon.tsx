@@ -1,10 +1,10 @@
-export const SettingsIcon = () => {
+import { type SVGProps } from 'react'
+
+export const SettingsIcon = (props: SVGProps<SVGSVGElement>) => {
   return (
     <svg
+      {...props}
       xmlns='http://www.w3.org/2000/svg'
-      className='icon icon-tabler icon-tabler-settings stroke-neutral-800'
-      width={26}
-      height={26}
       viewBox='0 0 24 24'
       strokeWidth={2}
       stroke='currentColor'

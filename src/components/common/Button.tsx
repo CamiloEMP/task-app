@@ -9,7 +9,7 @@ interface Props extends ButtonProps {
   children: React.ReactNode
   variant: Variants
   className?: string
-  icon?: () => JSX.Element
+  icon?: React.ReactNode
   [key: string]: unknown
 }
 const colors = {
@@ -31,7 +31,7 @@ export const Button = ({
       } flex items-center justify-center gap-1 rounded-md border-2 border-transparent font-semibold transition-colors`}
       {...rest}
     >
-      {Icon && <Icon />}
+      {Icon && Icon}
       {children}
     </button>
   )

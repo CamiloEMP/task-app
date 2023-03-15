@@ -6,7 +6,7 @@ interface Props {
 
 export const ProjectsWrapper = ({ projects }: Props) => {
   return (
-    <section className='space-y-12'>
+    <section className='space-y-12 pt-12'>
       <h1 className='text-center text-5xl font-semibold -tracking-wider text-emerald-600'>
         PROJECTS
       </h1>

@@ -4,6 +4,7 @@ import { Button } from '~/components/common/Button'
 import { Dialog } from '~/components/common/Dialog'
 import { useState } from 'react'
 import { LoaderIcon } from '../icons/LoaderIcon'
+import { AddIcon } from '../icons/AddIcon'
 
 export function CreateProject() {
   const dialogProject = useDialog()
@@ -32,11 +33,11 @@ export function CreateProject() {
   return (
     <>
       <Button
-        className='px-1 py-1 text-center text-sm'
+        className='px-4 py-1 text-center text-sm'
         variant='primary'
         onClick={dialogProject.onOpen}
       >
-        Create new Project
+        New Project
       </Button>
       <Dialog
         {...dialogProject}
@@ -53,7 +54,7 @@ export function CreateProject() {
             className='w-full rounded border-2 border-gray-300 py-1 px-2 font-medium outline-none transition ease-in-out focus:border-emerald-600'
           />
           <Button
-            className='w-52 py-1 text-center'
+            className='w-52 text-center'
             variant='primary'
             onClick={onHandleProject}
           >
