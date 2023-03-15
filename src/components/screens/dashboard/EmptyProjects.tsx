@@ -1,6 +1,6 @@
 import { Button } from '~/components/common/Button'
 
-export const EmpyProjects = () => {
+export const EmptyProjects = () => {
   return (
     <div className='flex flex-col items-center gap-4'>
       <h2 className='text-2xl font-semibold'>You do not have projects created yet</h2>
