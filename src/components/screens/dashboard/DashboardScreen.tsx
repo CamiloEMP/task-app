@@ -1,5 +1,6 @@
+import { EmptyComponentWrapper } from '~/components/common/EmptyComponentWrapper'
 import { api } from '~/utils/api'
-import { EmpyProjects } from './EmpyProjects'
+import { EmptyProjects } from './EmptyProjects'
 import { ProjectsWrapper } from './ProjectsWrapper'
 
 export const DashboardScreen = () => {
@@ -8,8 +9,12 @@ export const DashboardScreen = () => {
   console.log(query.data)
   return (
     <section className='flex h-full flex-auto flex-col items-center justify-center gap-12'>
-      {false && <EmpyProjects />}
-      <ProjectsWrapper />
+      <EmptyComponentWrapper
+        data={query.data}
+        isLoading={query.isLoading || query.isFetching}
+        EmptyComponent={<EmptyProjects />}
+        NonEmptyComponent={<ProjectsWrapper />}
+      />
     </section>
   )
 }

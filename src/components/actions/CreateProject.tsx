@@ -7,10 +7,12 @@ import { LoaderIcon } from '../icons/LoaderIcon'
 
 export function CreateProject() {
   const dialogProject = useDialog()
+  const utils = api.useContext()
+
   const [projectTitle, setProjectTitle] = useState('')
   const postProject = api.project.add.useMutation({
-    onSuccess(data) {
-      console.log('created', data)
+    onSuccess() {
+      utils.project.getAll.invalidate().catch(console.log)
     },
     onError(error) {
       console.error(error.message)
