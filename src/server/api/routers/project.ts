@@ -28,6 +28,7 @@ export const projectRouter = createTRPCRouter({
       return await ctx.prisma.project.findMany({
         select: {
           title: true,
+          id: true,
         },
       })
     } catch (error) {

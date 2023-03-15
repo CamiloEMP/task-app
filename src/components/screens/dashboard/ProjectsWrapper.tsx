@@ -1,21 +1,26 @@
-export const ProjectsWrapper = () => {
+import Link from 'next/link'
+
+interface Props {
+  projects: { title: string; id: string }[]
+}
+
+export const ProjectsWrapper = ({ projects }: Props) => {
   return (
-    <>
-      <h1 className='text-2xl font-semibold'>Tus proyectos</h1>
-      <section className='flex flex-wrap gap-4'>
-        <div className='flex aspect-square w-56 items-center justify-center rounded-md border p-4 shadow'>
-          <h3 className='text-lg'>Skymobiles App</h3>
-        </div>
-        <div className='flex aspect-square w-56 items-center justify-center rounded-md border p-4 shadow'>
-          <h3 className='text-lg'>Skymobiles App</h3>
-        </div>
-        <div className='flex aspect-square w-56 items-center justify-center rounded-md border p-4 shadow'>
-          <h3 className='text-lg'>Skymobiles App</h3>
-        </div>
-        <div className='flex aspect-square w-56 items-center justify-center rounded-md border p-4 shadow'>
-          <h3 className='text-lg'>Skymobiles App</h3>
-        </div>
+    <section className='space-y-12'>
+      <h1 className='text-center text-5xl font-semibold -tracking-wider text-emerald-600'>
+        PROJECTS
+      </h1>
+      <section className='flex flex-wrap justify-center gap-4'>
+        {projects.map(project => (
+          <Link
+            href={`${project.title}/${project.id}`}
+            key={project.id}
+            className='flex w-60 items-center justify-center rounded-md border-2 border-emerald-600 bg-emerald-300  p-4 transition-colors hover:bg-emerald-500 '
+          >
+            <h3 className='text-lg'>{project.title}</h3>
+          </Link>
+        ))}
       </section>
-    </>
+    </section>
   )
 }
