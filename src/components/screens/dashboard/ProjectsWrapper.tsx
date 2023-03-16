@@ -13,7 +13,7 @@ export const ProjectsWrapper = ({ projects }: Props) => {
       <section className='flex flex-wrap justify-center gap-4'>
         {projects.map(project => (
           <Link
-            href={`${project.title}/${project.id}`}
+            href={`/dashboard/${project.title}/${project.id}`}
             key={project.id}
             className='flex w-60 items-center justify-center rounded-md border-2 border-emerald-600 bg-emerald-300  p-4 transition-colors hover:bg-emerald-500 '
           >
