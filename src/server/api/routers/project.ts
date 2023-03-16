@@ -36,4 +36,18 @@ export const projectRouter = createTRPCRouter({
       throw new Error('Could not be get projects, try more later')
     }
   }),
+
+  getById: protectedProcedure
+    .input(
+      z.object({
+        id: z.string(),
+      })
+    )
+    .query(async ({ ctx, input }) => {
+      return await ctx.prisma.project.findUnique({
+        where: {
+          id: input.id,
+        },
+      })
+    }),
 })
